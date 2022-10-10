@@ -66,7 +66,7 @@ from Covid_Portfolio..Covid_Vaccination
 
 
 --amount of people vaccinated as of 10/04/22
- select location, max(people_vaccinated) as vaccinated
+ select location, max(people_vaccinated) as vaccinated, max(people_vaccinated/population) * 100 as percent_vaccinated
 from Covid_Portfolio..Covid_Vaccination
 where void is not null
 group by location
